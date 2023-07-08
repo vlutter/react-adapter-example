@@ -7,3 +7,4 @@ Basic concepts I included:
 -   Vite (because it's really faster than usual CRA for example)
 -   Eslint
 -   Prettier
+-   Husky + lint-staged
