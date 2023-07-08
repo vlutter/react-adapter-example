@@ -5,7 +5,7 @@ export const Test: React.FC<{ items: { [key: string]: any }[] }> = (props) => {
 
     useEffect(() => {
         console.log(items);
-    }, [items]);
+    }, []);
 
     return <></>;
 };
