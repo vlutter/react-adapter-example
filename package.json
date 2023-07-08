@@ -8,15 +8,11 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx src/",
     "preview": "vite preview",
-    "prepare": "husky install"
-  },
-  "husky": {    
-    "hooks": {
-      "pre-commit": "tsc && npx lint-staged"
-    }
+    "prepare": "husky install",
+    "tsc": "node node_modules/typescript/bin/tsc --noEmit"
   },
   "lint-staged": {    
-    "*.{ts,tsx}": "lint --fix"
+    "*.{ts,tsx}": "npm run lint --fix"
   },
   "dependencies": {
     "react": "^18.2.0",

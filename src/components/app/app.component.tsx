@@ -1,7 +1,7 @@
 import { Test } from '../test/test.component';
 
 const App = () => {
-    return <Test />;
+    return <Test items={[]} />;
 };
 
 export default App;
