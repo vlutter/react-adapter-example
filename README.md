@@ -1,10 +1,7 @@
-# My React template
+# React Adapter example
 
-I will use it for initializing new projects to not spend a lot of time on configuration, etc.
+This is an example of adapting a class for use inside a React component via hooks.
 
-Basic concepts I included:
+It is necessary because after initialising class inside a component the class instance link will not change and consequently the component will not be rerendered.
 
--   Vite (because it's really faster than usual CRA for example)
--   Eslint
--   Prettier
--   Husky + lint-staged
+This approach can be helpful if you are realising some framework-agnostic library or some functionality that can be easily covered by class paradigm.
