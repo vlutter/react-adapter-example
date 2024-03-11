@@ -1,28 +1,22 @@
-import { useEffect } from 'react';
 import useCounter from '@vlutter/counter-react';
+import { useCallback } from 'react';
 
 const App = () => {
     const counter = useCounter(0);
 
-    useEffect(() => {
-        console.log(counter.count);
-    }, [counter.count]);
+    const decrement = useCallback(() => {
+        counter.decrement();
+    }, [counter]);
 
-    const { count, increment, decrement } = counter;
-
-    const handleIncrementClick = () => {
-        increment.call(counter);
-    };
-
-    const handleDecrementClick = () => {
-        decrement.call(counter);
-    };
+    const increment = useCallback(() => {
+        counter.increment();
+    }, [counter]);
 
     return (
         <div>
-            <button onClick={handleDecrementClick}>-</button>
-            {count}
-            <button onClick={handleIncrementClick}>+</button>
+            <button onClick={decrement}>-</button>
+            {counter.count}
+            <button onClick={increment}>+</button>
         </div>
     );
 };

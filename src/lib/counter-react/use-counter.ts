@@ -8,7 +8,7 @@ export const useCounter = (initialCount: number): Counter => {
         onChange: rerender
     }), [rerender]); 
 
-    const [counter] = useState(new Counter(initialCount, options));
+    const [counter] = useState(() => new Counter(initialCount, options));
 
     counter.setOptions(options);
 
