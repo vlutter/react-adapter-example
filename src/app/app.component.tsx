@@ -1,4 +1,4 @@
-import { Test } from '../test/test.component';
+import { Test } from '@components';
 
 const App = () => {
     return <Test items={[]} />;
