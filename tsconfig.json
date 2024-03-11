@@ -23,7 +23,8 @@
     /* Paths */
     "baseUrl": ".",
     "paths": {
-        "@components": ["src/components"]
+        "@vlutter/counter": ["src/lib/counter"],
+        "@vlutter/counter-react": ["src/lib/counter-react"],
     }
   },
   "include": ["src"],

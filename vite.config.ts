@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@components': path.resolve(__dirname, 'src/components'),
+      '@vlutter/counter': path.resolve(__dirname, 'src/lib/counter'),
+      '@vlutter/counter-react': path.resolve(__dirname, 'src/lib/counter-react'),
     }
   }
 })
